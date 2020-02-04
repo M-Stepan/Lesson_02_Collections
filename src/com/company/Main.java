@@ -2,9 +2,6 @@ package com.company;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.*;
 
 public class Main {
@@ -12,7 +9,7 @@ public class Main {
     public static  void main(String[] args) throws IOException {
         //1
         String text = "";
-        Scanner in = new Scanner(new File("text.txt"));
+        Scanner in = new Scanner(new File("text1.txt"));
         while(in.hasNext())
             text += in.nextLine() + "\n";
         in.close();

@@ -9,12 +9,12 @@ public class Main {
     public static  void main(String[] args) throws IOException {
         //1
         String text = "";
-        Scanner in = new Scanner(new File("text1.txt"));
+        Scanner in = new Scanner(new File("text.txt"));
         while(in.hasNext())
             text += in.nextLine() + "\n";
         in.close();
         System.out.println(text);
-        String inputText = text.replaceAll("[,.!]"," ").replaceAll("\\s+"," ");
+        String inputText = text.replaceAll("[,.!]"," ").replaceAll("\ufeff","").replaceAll("\\s+"," ");
         String inputTextM = inputText.toLowerCase();
         String[] textAl = inputTextM.split(" ");
         //System.out.println(Arrays.toString(textAl)); //проверка массива
